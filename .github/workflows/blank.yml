@@ -1,15 +1,17 @@
-name: Job
+name: job with flow
 on: workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello! this is build"
+      - run: echo "Hello! This is BUILD"
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello! this is test"
+      - run: echo "Hello! This is TEST"
   deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello! this is deploy"
+      - run : echo " Hello! This is deploy"
