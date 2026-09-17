@@ -1,0 +1,7 @@
+name: Job
+on: workflow_dispatch
+Jobs:
+  build:
+    run-on: ubuntu-latest
+    steps:
+      - run: echo "Hello World"
