@@ -1,6 +1,6 @@
 name: Job
 on: workflow_dispatch
-Jobs:
+jobs:
   build:
     run-on: ubuntu-latest
     steps:
